@@ -1,0 +1,941 @@
+[
+  {
+    "number": 1,
+    "start": "2026-09-07",
+    "end": "2026-09-13",
+    "title": "Technical Art Digest 1",
+    "backfill": true,
+    "recommendations": [
+      {
+        "title": "Neural Texture Compression in Metal 4",
+        "reason": "适合评估纹理显存预算与新硬件功能的图形程序员；实现和边界条件都可参考。"
+      },
+      {
+        "title": "D3D12 稀疏资源改善 GPU 驱动渲染器显存",
+        "reason": "对 GPU 驱动场景的动态缓冲分配有直接参考价值。"
+      },
+      {
+        "title": "Vulkan 离屏 HDR 渲染教程",
+        "reason": "中级教程；可学到离屏渲染目标与帧提交的实际组织方式。"
+      }
+    ],
+    "items": [
+      {
+        "id": 1,
+        "title": "Neural Texture Compression in Metal 4",
+        "category": "技术美术",
+        "published": "2026-09-09",
+        "publishedTime": "2026-09-09T00:00:00+00:00",
+        "source": "syllogi-graphikon.vercel.app",
+        "url": "https://syllogi-graphikon.vercel.app/posts/metal-neural-texture-compression/",
+        "summary": "作者在 Apple Silicon 上实现 Metal 神经纹理压缩，拆解潜变量网格、量化感知训练与推理路径，并给出设备性能对比。文章也指出透明测试、各向异性过滤等生产限制。",
+        "value": "适合评估纹理显存预算与新硬件功能的图形程序员；实现和边界条件都可参考。",
+        "image": "https://syllogi-graphikon.vercel.app/data/NTC/thumbnail.png",
+        "imageSource": "https://syllogi-graphikon.vercel.app/posts/metal-neural-texture-compression/"
+      },
+      {
+        "id": 2,
+        "title": "D3D12 稀疏资源改善 GPU 驱动渲染器显存",
+        "category": "技术美术",
+        "published": "2026-09-11",
+        "publishedTime": "2026-09-11T19:27:22+00:00",
+        "source": "zino2201.substack.com",
+        "url": "https://zino2201.substack.com/p/how-sparse-resources-helped-my-gpu",
+        "summary": "作者比较静态、扩容和分块分配策略，最终用 D3D12 reserved resource 按 64 KiB 页提交和释放内存。统一虚拟地址空间让大型持久缓冲区更易管理。",
+        "value": "对 GPU 驱动场景的动态缓冲分配有直接参考价值。",
+        "image": "https://substackcdn.com/image/fetch/$s_!KND7!,f_auto,q_auto:best,fl_progressive:steep/https%3A%2F%2Fzino2201.substack.com%2Ftwitter%2Fsubscribe-card.jpg%3Fv%3D-321354076%26version%3D9",
+        "imageSource": "https://zino2201.substack.com/p/how-sparse-resources-helped-my-gpu"
+      },
+      {
+        "id": 3,
+        "title": "Vulkan 离屏 HDR 渲染教程",
+        "category": "技术美术",
+        "published": "2026-09-13",
+        "publishedTime": "2026-09-13T03:39:15-07:00",
+        "source": "youtube.com",
+        "url": "https://www.youtube.com/watch?v=fcDyZvJ9o_0",
+        "summary": "教程将光照 Pass 从交换链移至离屏 HDR 图像，解释命令缓冲与提交队列需要的调整。它示范了后处理前的基础帧结构。",
+        "value": "中级教程；可学到离屏渲染目标与帧提交的实际组织方式。",
+        "image": "https://i.ytimg.com/vi/fcDyZvJ9o_0/maxresdefault.jpg",
+        "imageSource": "https://www.youtube.com/watch?v=fcDyZvJ9o_0"
+      },
+      {
+        "id": 4,
+        "title": "NVIDIA 介绍两条 CUDA Rust 内核路线",
+        "category": "技术美术",
+        "published": "2026-09-08",
+        "publishedTime": "2026-09-08T12:00:00+00:00",
+        "source": "developer.nvidia.com",
+        "url": "https://developer.nvidia.com/blog/introducing-cuda-rust-two-tracks-for-writing-gpu-kernels/",
+        "summary": "NVIDIA 介绍面向 SIMT 的 cuda-oxide 与面向 tile 编程的 cutile-rs，分别采用 PTX 后端和 CUDA Tile IR。两条路线都尝试在内核开发中加强编译期内存安全。",
+        "value": "适合关注 GPU 工具链与计算型制作工具的开发者，值得评估 Rust 接入空间。",
+        "image": "https://developer-blogs.nvidia.com/wp-content/uploads/2026/09/image1-1.webp",
+        "imageSource": "https://developer.nvidia.com/blog/introducing-cuda-rust-two-tracks-for-writing-gpu-kernels/"
+      },
+      {
+        "id": 5,
+        "title": "Unity HLSL 溶解与噪声 Shader 教程",
+        "category": "技术美术",
+        "published": "2026-09-10",
+        "publishedTime": "2026-09-10T06:09:27-07:00",
+        "source": "youtube.com",
+        "url": "https://www.youtube.com/watch?v=2SwV2oDJRj4",
+        "summary": "视频从零构建 Perlin 与 Voronoi 噪声，并用它们驱动溶解效果。示例聚焦 Unity Shader 代码中的程序化遮罩。",
+        "value": "入门到中级教程；可以练习噪声函数、阈值控制与可复用特效材质。",
+        "image": "https://i.ytimg.com/vi/2SwV2oDJRj4/maxresdefault.jpg",
+        "imageSource": "https://www.youtube.com/watch?v=2SwV2oDJRj4"
+      }
+    ],
+    "trend": "本周从 Metal 神经纹理压缩到 D3D12 稀疏缓冲，重点都落在显存如何更有效地服务画面。Vulkan 离屏渲染与 Unity 噪声 Shader 则提供了可立即复现的练习。",
+    "practice": "在 Unity 中重做溶解材质，并用离屏 HDR Pass 记录后处理前后的画面差异。",
+    "watch": "神经纹理压缩仍需验证透明、各向异性过滤与不同材质尺寸的实际效果。"
+  },
+  {
+    "number": 2,
+    "start": "2026-09-14",
+    "end": "2026-09-20",
+    "title": "Technical Art Digest 2",
+    "backfill": true,
+    "recommendations": [
+      {
+        "title": "AMD：四面体笼降低动画几何体 BVH 占用",
+        "reason": "对大量动态植被和光追场景的加速结构设计有参考价值。"
+      },
+      {
+        "title": "UE 5.8 表面稳定分形抖动完整教程",
+        "reason": "中高级教程；可学习抖动图案的表面稳定性及自定义 HLSL 的应用。"
+      },
+      {
+        "title": "图形开发中的内存管理基础",
+        "reason": "入门教程；帮助工具与引擎开发者理解资源分配的成本。"
+      }
+    ],
+    "items": [
+      {
+        "id": 1,
+        "title": "AMD：四面体笼降低动画几何体 BVH 占用",
+        "category": "技术美术",
+        "published": "2026-09-17",
+        "publishedTime": "2026-09-17T13:00:00.000Z",
+        "source": "gpuopen.com",
+        "url": "https://gpuopen.com/learn/how-tetrahedral-cages-significantly-reduce-bvh-memory-usage/",
+        "summary": "AMD 展示用可变形四面体笼驱动密集几何体，保持几何体及 BVH 静态，仅更新笼体。文章给出大规模动画植被的显存示例。",
+        "value": "对大量动态植被和光追场景的加速结构设计有参考价值。",
+        "image": "https://gpuopen.com/images/amd_tetrahedral_cage_approach_featured.DNoUDeoB.jpg",
+        "imageSource": "https://gpuopen.com/learn/how-tetrahedral-cages-significantly-reduce-bvh-memory-usage/"
+      },
+      {
+        "id": 2,
+        "title": "UE 5.8 表面稳定分形抖动完整教程",
+        "category": "技术美术",
+        "published": "2026-09-19",
+        "publishedTime": "2026-09-19T09:00:14-07:00",
+        "source": "youtube.com",
+        "url": "https://www.youtube.com/watch?v=HrMHbN3Q21M",
+        "summary": "教程在 Unreal Engine 中重做表面稳定分形抖动，涉及 HLSL 导数、UV 缩放与三维体纹理采样。最终以屏幕后处理形式实现。",
+        "value": "中高级教程；可学习抖动图案的表面稳定性及自定义 HLSL 的应用。",
+        "image": "https://i.ytimg.com/vi/HrMHbN3Q21M/maxresdefault.jpg",
+        "imageSource": "https://www.youtube.com/watch?v=HrMHbN3Q21M"
+      },
+      {
+        "id": 3,
+        "title": "图形开发中的内存管理基础",
+        "category": "技术美术",
+        "published": "2026-09-17",
+        "publishedTime": "2026-09-17T17:50:29-07:00",
+        "source": "youtube.com",
+        "url": "https://www.youtube.com/watch?v=3rez2rDYHHA",
+        "summary": "视频用易理解的示例解释静态分配、虚拟地址、保护区域和系统级内存申请。它进一步讨论为何针对数据特性设计分配器。",
+        "value": "入门教程；帮助工具与引擎开发者理解资源分配的成本。",
+        "image": "https://i.ytimg.com/vi/3rez2rDYHHA/maxresdefault.jpg",
+        "imageSource": "https://www.youtube.com/watch?v=3rez2rDYHHA"
+      }
+    ],
+    "trend": "大规模动态几何体的 BVH 占用与 Unreal 表面稳定抖动，分别触及场景扩展和材质细节稳定性。内存管理基础也提醒工具开发者关注资源生命周期。",
+    "practice": "在 UE 示例场景中比较普通屏幕抖动与表面稳定分形抖动的镜头运动表现。",
+    "watch": "四面体笼技术的构建成本和动画资产兼容性仍需在制作管线中验证。"
+  },
+  {
+    "number": 3,
+    "start": "2026-09-21",
+    "end": "2026-09-27",
+    "title": "Technical Art Digest 3",
+    "backfill": true,
+    "recommendations": [
+      {
+        "title": "高性能模糊：从 Box Blur 到双滤波",
+        "reason": "中级教程；可复用到 Bloom、景深及编辑器预览的模糊 Pass。"
+      },
+      {
+        "title": "Godot 值噪声导数与平滑曲面",
+        "reason": "中级教程；能把噪声从颜色图案延伸到稳定的表面形变。"
+      },
+      {
+        "title": "Metal Tile Shader 直接编码渲染目标",
+        "reason": "适合移动端图形优化与 GPU 纹理压缩管线研究。"
+      }
+    ],
+    "items": [
+      {
+        "id": 1,
+        "title": "高性能模糊：从 Box Blur 到双滤波",
+        "category": "技术美术",
+        "published": "2026-09-24",
+        "publishedTime": "2026-09-24T12:30:44-07:00",
+        "source": "youtube.com",
+        "url": "https://www.youtube.com/watch?v=YJVYX8tllj4",
+        "summary": "视频比较二维卷积、可分离高斯模糊及双滤波的速度与画质。它解释双线性采样和降采样如何减少工作量。",
+        "value": "中级教程；可复用到 Bloom、景深及编辑器预览的模糊 Pass。",
+        "image": "https://i.ytimg.com/vi/YJVYX8tllj4/maxresdefault.jpg",
+        "imageSource": "https://www.youtube.com/watch?v=YJVYX8tllj4"
+      },
+      {
+        "id": 2,
+        "title": "Godot 值噪声导数与平滑曲面",
+        "category": "技术美术",
+        "published": "2026-09-25",
+        "publishedTime": "2026-09-25T00:00:00Z",
+        "source": "catlikecoding.com",
+        "url": "https://catlikecoding.com/godot/procedural-gpu-patterns/08-value-noise-derivatives/",
+        "summary": "教程为值噪声推导一阶和二阶连续的插值函数，并演示法线与顶点位移。内容是 Godot 程序化 GPU 图案系列的一部分。",
+        "value": "中级教程；能把噪声从颜色图案延伸到稳定的表面形变。",
+        "image": "https://catlikecoding.com/godot/procedural-gpu-patterns/08-value-noise-derivatives/banner.png",
+        "imageSource": "https://catlikecoding.com/godot/procedural-gpu-patterns/08-value-noise-derivatives/"
+      },
+      {
+        "id": 3,
+        "title": "Metal Tile Shader 直接编码渲染目标",
+        "category": "技术美术",
+        "published": "2026-09-25",
+        "publishedTime": "2026-09-25T10:44:39-08:00",
+        "source": "ludicon.com",
+        "url": "https://www.ludicon.com/castano/blog/2026/09/encoding-render-targets-for-free-with-tile-shaders/",
+        "summary": "作者使用 memoryless RGBA8 附件和 tile shader，在 tile 内存中直接编码渲染结果，并与独立 compute Pass 比较。文章分析了 Apple GPU 的带宽与调度收益。",
+        "value": "适合移动端图形优化与 GPU 纹理压缩管线研究。",
+        "image": "http://www.ludicon.com/castano/blog/wp-content/uploads/2026/09/tile-shader-card.png",
+        "imageSource": "https://www.ludicon.com/castano/blog/2026/09/encoding-render-targets-for-free-with-tile-shaders/"
+      },
+      {
+        "id": 4,
+        "title": "GPU 字体渲染方案比较",
+        "category": "技术美术",
+        "published": "2026-09-23",
+        "publishedTime": "2026-09-23T23:02:09-06:00",
+        "source": "alphapixeldev.com",
+        "url": "https://alphapixeldev.com/sdf-vs-msdf-vs-slug-vs-rive-gpu-text-rendering/",
+        "summary": "文章比较 SDF、MSDF、图集与直接处理 Bézier 轮廓等方法，梳理清晰度、缩放与资源管理取舍。它特别解释了 Slug 的片元级轮廓渲染。",
+        "value": "对游戏 UI、编辑器和调试文字系统选型有帮助。",
+        "image": "https://alphapixeldev.com/wp-content/uploads/2026/09/slughorn-vs-sdf-msdf-rive-grazing-perspective.png",
+        "imageSource": "https://alphapixeldev.com/sdf-vs-msdf-vs-slug-vs-rive-gpu-text-rendering/"
+      }
+    ],
+    "trend": "本周多篇内容聚焦每帧成本：模糊算法减少采样，Metal tile shader 减少独立 Pass，字体渲染则在质量与图集管理之间权衡。",
+    "practice": "用 Godot 值噪声导数驱动法线或顶点位移，并观察连续性。",
+    "watch": "Tile shader 方法依赖特定 GPU 架构，迁移前需重新测量。"
+  },
+  {
+    "number": 4,
+    "start": "2026-09-28",
+    "end": "2026-10-04",
+    "title": "Technical Art Digest 4",
+    "backfill": true,
+    "recommendations": [
+      {
+        "title": "Fyr Baker：Blender 纹理烘焙插件",
+        "reason": "适用 Blender；可作为游戏资产烘焙流程的工具候选。"
+      },
+      {
+        "title": "Blender Grease Pencil Shape Keys 角色绑定测试",
+        "reason": "可评估 Grease Pencil 角色变形工作流的成熟度。"
+      },
+      {
+        "title": "Lumen 复杂场景降噪布光拆解",
+        "reason": "中级实践；可以直接借鉴到 Unreal Engine 环境布光与资产包交付。"
+      }
+    ],
+    "items": [
+      {
+        "id": 1,
+        "title": "Fyr Baker：Blender 纹理烘焙插件",
+        "category": "技术美术",
+        "published": "2026-09-29",
+        "source": "80 Level",
+        "url": "https://80.lv/articles/marmoset-toolbag-inspired-texture-baking-add-on-released-for-blender",
+        "summary": "这款 Blender 插件借鉴 Marmoset Toolbag 的烘焙交互，试图把多贴图烘焙和预览集中到更顺手的界面。适合检查 Blender 资产烘焙环节能否减少来回设置。",
+        "value": "适用 Blender；可作为游戏资产烘焙流程的工具候选。",
+        "image": "https://cdn.80.lv/api/upload/meta/50422/images/6abb8ad4355bb/contain_1200x630.jpg",
+        "imageSource": "https://80.lv/articles/marmoset-toolbag-inspired-texture-baking-add-on-released-for-blender",
+        "publishedTime": "2026-09-29T09:54:00+00:00"
+      },
+      {
+        "id": 2,
+        "title": "Blender Grease Pencil Shape Keys 角色绑定测试",
+        "category": "技术美术",
+        "published": "2026-09-30",
+        "source": "80 Level",
+        "url": "https://80.lv/articles/the-long-awaited-shape-keys-for-blender-s-grease-pencil-tested-on-a-character-rig",
+        "summary": "文章展示 Grease Pencil Shape Keys 在角色绑定上的测试，并指出编辑模式一次只能查看一个形态键等限制。对于二维线条与三维角色混合动画，这是值得跟进的能力。",
+        "value": "可评估 Grease Pencil 角色变形工作流的成熟度。",
+        "image": "https://cdn.80.lv/api/upload/meta/50443/images/6abd031e6a82e/contain_1200x630.jpg",
+        "imageSource": "https://80.lv/articles/the-long-awaited-shape-keys-for-blender-s-grease-pencil-tested-on-a-character-rig",
+        "publishedTime": "2026-09-30T13:20:00+00:00"
+      },
+      {
+        "id": 3,
+        "title": "Lumen 复杂场景降噪布光拆解",
+        "category": "技术美术",
+        "published": "2026-10-01",
+        "source": "80 Level / Aleksander Goryachev",
+        "url": "https://80.lv/articles/suppressing-noise-without-sacrificing-lighting-quality-when-using-unreal-engine-s-lumen",
+        "summary": "作者以医院场景说明多光源下的 Lumen 噪点抑制：用实体点光源掩盖自发光噪声、局部补光处理窄缝，并比较性能预算不同的方案。文章来自艺术家的制作拆解。",
+        "value": "中级实践；可以直接借鉴到 Unreal Engine 环境布光与资产包交付。",
+        "image": "https://cdn.80.lv/api/upload/meta/50446/images/6abe56cac0718/contain_1200x630.jpg",
+        "imageSource": "https://80.lv/articles/suppressing-noise-without-sacrificing-lighting-quality-when-using-unreal-engine-s-lumen",
+        "publishedTime": "2026-10-01T17:04:00+00:00"
+      }
+    ],
+    "trend": "这周的实用主题是 DCC 与实时场景的制作细节：Blender 烘焙、Grease Pencil 变形和 Unreal Lumen 降噪都解决具体返工点。",
+    "practice": "在一个小型 Blender 资产上测试 Fyr Baker 的贴图烘焙设置和输出检查。",
+    "watch": "Grease Pencil Shape Keys 的编辑限制与 Lumen 补光方案的性能代价值得留意。"
+  },
+  {
+    "number": 5,
+    "start": "2026-10-05",
+    "end": "2026-10-11",
+    "title": "Technical Art Digest 5",
+    "backfill": true,
+    "recommendations": [
+      {
+        "title": "从 Shader 优化理解大模型推理性能",
+        "reason": "有助于评估本地 AI 美术工具的推理成本与显存约束。"
+      },
+      {
+        "title": "时空复用加速顺序无关透明",
+        "reason": "可供粒子、毛发与多层透明材质的性能研究参考。"
+      },
+      {
+        "title": "RizomUV 2027 更新展开与界面定制",
+        "reason": "适用 RizomUV 与各类 DCC 导出流程；值得测试复杂资产的展开效率。"
+      }
+    ],
+    "items": [
+      {
+        "id": 1,
+        "title": "从 Shader 优化理解大模型推理性能",
+        "category": "AIGC",
+        "published": "2026-10-07",
+        "publishedTime": "2026-10-07T22:38:31+00:00",
+        "source": "cqegbert.substack.com",
+        "url": "https://cqegbert.substack.com/p/from-shader-optimization-to-llm-inference",
+        "summary": "作者把图形程序员熟悉的带宽、并行度与瓶颈分析应用到本地模型推理，在 RTX 3090 上比较量化、Flash Attention、KV Cache 压缩等方案。文章强调优化需对应真实瓶颈。",
+        "value": "有助于评估本地 AI 美术工具的推理成本与显存约束。",
+        "image": "https://substackcdn.com/image/fetch/$s_!4niN!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0f5f9bcc-25c5-46e8-8e97-4cba9ea9375f_1700x935.png",
+        "imageSource": "https://cqegbert.substack.com/p/from-shader-optimization-to-llm-inference"
+      },
+      {
+        "id": 2,
+        "title": "时空复用加速顺序无关透明",
+        "category": "技术美术",
+        "published": "2026-10-06",
+        "publishedTime": "2026-10-06T00:00:00+02:00",
+        "source": "tobias-franke.eu",
+        "url": "https://www.tobias-franke.eu/publications/tsopouridis26stafoit/index.html",
+        "summary": "论文提出可插入式加速框架，结合自适应分块采样、可变速率着色和时间重投影。目标是在复杂透明场景中降低 OIT 成本。",
+        "value": "可供粒子、毛发与多层透明材质的性能研究参考。",
+        "image": "https://www.tobias-franke.eu/publications/tsopouridis26stafoit/tsopouridis26stafoit.jpg",
+        "imageSource": "https://www.tobias-franke.eu/publications/tsopouridis26stafoit/index.html"
+      },
+      {
+        "id": 3,
+        "title": "RizomUV 2027 更新展开与界面定制",
+        "category": "技术美术",
+        "published": "2026-10-08",
+        "source": "80 Level / RizomUV",
+        "url": "https://80.lv/articles/rizomuv-2027-introduces-faster-unfolding-live-updates-full-ui-customization",
+        "summary": "RizomUV 2027 带来更快的展开运算、实时更新和更自由的界面定制。对于批量游戏资产制作，核心价值在 UV 处理的迭代速度。",
+        "value": "适用 RizomUV 与各类 DCC 导出流程；值得测试复杂资产的展开效率。",
+        "image": "https://cdn.80.lv/api/upload/meta/50468/images/6abeca4e8569a/contain_1200x630.jpg",
+        "imageSource": "https://80.lv/articles/rizomuv-2027-introduces-faster-unfolding-live-updates-full-ui-customization",
+        "publishedTime": "2026-10-08T16:00:00+00:00"
+      }
+    ],
+    "trend": "图形与 AI 推理都在复用 GPU 性能分析方法，透明渲染也继续借助时空复用降低成本。与此同时，UV 工具更新更直接影响资产制作的周转时间。",
+    "practice": "用同一组复杂资产比较 RizomUV 新版展开速度与结果质量。",
+    "watch": "OIT 加速方案在快速运动、细小透明几何体上的时间稳定性仍需测试。"
+  },
+  {
+    "number": 6,
+    "start": "2026-10-12",
+    "end": "2026-10-18",
+    "title": "Technical Art Digest 6",
+    "backfill": true,
+    "recommendations": [
+      {
+        "title": "自组织程序化树木生成实践",
+        "reason": "对程序化植被资产生产、LOD 与远景森林渲染有直接参考。"
+      },
+      {
+        "title": "Godot 透明与屏幕纹理基础",
+        "reason": "入门教程；可系统补齐透明材质的常见制作与排序取舍。"
+      },
+      {
+        "title": "Brigador Killers 的建筑破坏与 Sprite 管线",
+        "reason": "可参考 3D 资产转 2D 表现、破坏反馈与生产成本的取舍。"
+      }
+    ],
+    "items": [
+      {
+        "id": 1,
+        "title": "自组织程序化树木生成实践",
+        "category": "技术美术",
+        "published": "2026-10-15",
+        "publishedTime": "2026-10-15T10:00:00+02:00",
+        "source": "brashandplucky.com",
+        "url": "https://brashandplucky.com/2026/10/15/growing-trees.html",
+        "summary": "作者实现自组织生长树模型，并从枝干骨架生成树皮与叶片卡片，进一步烘焙深度场 impostor。文章也讨论逐年生长的模拟方式。",
+        "value": "对程序化植被资产生产、LOD 与远景森林渲染有直接参考。",
+        "image": "https://brashandplucky.com/thumbnails/2026/chemaguerra-growing-trees.png",
+        "imageSource": "https://brashandplucky.com/2026/10/15/growing-trees.html"
+      },
+      {
+        "id": 2,
+        "title": "Godot 透明与屏幕纹理基础",
+        "category": "技术美术",
+        "published": "2026-10-16",
+        "publishedTime": "2026-10-16T07:48:48-07:00",
+        "source": "youtube.com",
+        "url": "https://www.youtube.com/watch?v=2rw55VfYp2E",
+        "summary": "视频讲解标准 Alpha 混合、预乘 Alpha、裁剪及屏幕空间抖动，并对比不同混合模式的视觉结果。示例使用 Godot Shader。",
+        "value": "入门教程；可系统补齐透明材质的常见制作与排序取舍。",
+        "image": "https://i.ytimg.com/vi/2rw55VfYp2E/maxresdefault.jpg",
+        "imageSource": "https://www.youtube.com/watch?v=2rw55VfYp2E"
+      },
+      {
+        "id": 3,
+        "title": "Brigador Killers 的建筑破坏与 Sprite 管线",
+        "category": "技术美术",
+        "published": "2026-10-15",
+        "source": "80 Level / Brigador Killers",
+        "url": "https://80.lv/articles/how-brigador-killers-makes-blowing-up-buildings-part-of-the-strategy",
+        "summary": "开发团队介绍如何把建筑破坏做成玩法的一部分，并结合 Blender 到 Sprite 的制作流程。技术方案与美术表现围绕可读性和战术反馈协同设计。",
+        "value": "可参考 3D 资产转 2D 表现、破坏反馈与生产成本的取舍。",
+        "image": "https://cdn.80.lv/api/upload/meta/50644/images/6ad11c21b810c/contain_1200x630.jpg",
+        "imageSource": "https://80.lv/articles/how-brigador-killers-makes-blowing-up-buildings-part-of-the-strategy",
+        "publishedTime": "2026-10-15T18:32:00+00:00"
+      }
+    ],
+    "trend": "程序化树木把生长模拟、卡片叶片和远景 impostor 连成完整资产链。另一边，Godot 透明教程和 Brigador Killers 的破坏制作展示了画面表现如何受管线与玩法共同约束。",
+    "practice": "依据树木文章搭一个最小的枝干生长原型，并为远景烘焙 impostor。",
+    "watch": "关注透明排序、植被 LOD 切换与 3D 转 Sprite 的画面一致性。"
+  },
+  {
+    "number": 7,
+    "start": "2026-10-19",
+    "end": "2026-10-25",
+    "title": "Technical Art Digest 7",
+    "backfill": true,
+    "recommendations": [
+      {
+        "title": "GPU 驱动流程中的 Count、Scan、Write 模式",
+        "reason": "中高级教程；能为 GPU 驱动渲染和大规模实例处理提供通用算法框架。"
+      },
+      {
+        "title": "Godot 深度与模板缓冲教程",
+        "reason": "入门到中级教程；适合练习后处理、水体及遮罩效果。"
+      },
+      {
+        "title": "用 Blender 与 Vulkan 把 Pong 搬进 3D",
+        "reason": "中级教程；可练习资产导出、GLB 加载和自制渲染器的衔接。"
+      }
+    ],
+    "items": [
+      {
+        "id": 1,
+        "title": "GPU 驱动流程中的 Count、Scan、Write 模式",
+        "category": "技术美术",
+        "published": "2026-10-24",
+        "publishedTime": "2026-10-24T15:21:46-07:00",
+        "source": "youtube.com",
+        "url": "https://www.youtube.com/watch?v=Gb2Sw7RHxJ8",
+        "summary": "视频用剔除、LOD 与聚簇光照说明 GPU 驱动的计数、前缀和、写入流程。它进一步比较扩展、压缩、分桶以及原子操作的确定性问题。",
+        "value": "中高级教程；能为 GPU 驱动渲染和大规模实例处理提供通用算法框架。",
+        "image": "https://i.ytimg.com/vi/Gb2Sw7RHxJ8/maxresdefault.jpg",
+        "imageSource": "https://www.youtube.com/watch?v=Gb2Sw7RHxJ8"
+      },
+      {
+        "id": 2,
+        "title": "Godot 深度与模板缓冲教程",
+        "category": "技术美术",
+        "published": "2026-10-22",
+        "publishedTime": "2026-10-22T08:49:32-07:00",
+        "source": "youtube.com",
+        "url": "https://www.youtube.com/watch?v=Y9F4MrGk-c4",
+        "summary": "视频演示深度采样、线性化、轮廓与水面泡沫，并用模板缓冲制作遮罩。它把两个常见屏幕空间数据源放在可见示例中讲解。",
+        "value": "入门到中级教程；适合练习后处理、水体及遮罩效果。",
+        "image": "https://i.ytimg.com/vi/Y9F4MrGk-c4/maxresdefault.jpg",
+        "imageSource": "https://www.youtube.com/watch?v=Y9F4MrGk-c4"
+      },
+      {
+        "id": 3,
+        "title": "用 Blender 与 Vulkan 把 Pong 搬进 3D",
+        "category": "技术美术",
+        "published": "2026-10-22",
+        "publishedTime": "2026-10-22T09:36:00-07:00",
+        "source": "youtube.com",
+        "url": "https://www.youtube.com/watch?v=_1BQ-6qc0Bk",
+        "summary": "教程在 Blender 中搭建场景并导出 GLB，然后将模型数据接入 Vulkan 运行时。它说明从二维逻辑迁移到三维空间所需的数据变化。",
+        "value": "中级教程；可练习资产导出、GLB 加载和自制渲染器的衔接。",
+        "image": "https://i.ytimg.com/vi/_1BQ-6qc0Bk/maxresdefault.jpg",
+        "imageSource": "https://www.youtube.com/watch?v=_1BQ-6qc0Bk"
+      },
+      {
+        "id": 4,
+        "title": "Substance 3D Painter 12.2 更新",
+        "category": "技术美术",
+        "published": "2026-10-21",
+        "source": "Adobe Substance 3D Painter",
+        "url": "https://experienceleague.adobe.com/en/docs/substance-3d-painter/using/release-notes/version-12-2",
+        "summary": "版本更新涉及 cage painting、Polygon Fill 选择改进和透明材质预览。适合检查复杂模型烘焙和材质选择流程中实际节省的步骤。",
+        "value": "适用 Substance 3D Painter；资产制作团队可评估升级收益。",
+        "image": "https://experienceleague.adobe.com/en/docs/substance-3d-painter/using/release-notes/media_1719489273540e875b0c69daf8a5551c6ddbb7cdc.jpg?format=jpg&optimize=medium&width=750",
+        "imageSource": "https://80.lv/articles/substance-3d-painter-12-2-introduces-cage-painting-and-smarter-polygon-fill"
+      }
+    ],
+    "trend": "GPU 驱动内容处理与 Godot 深度模板教程都围绕可复用的渲染基础；Substance 3D Painter 12.2 则把烘焙笼编辑带回视口交互。",
+    "practice": "用 Count、Scan、Write 三步做一个简单实例剔除练习。",
+    "watch": "Painter 新的 cage painting 在现有资产烘焙管线中的兼容性值得持续测试。"
+  },
+  {
+    "number": 8,
+    "start": "2026-10-26",
+    "end": "2026-11-01",
+    "notionUrl": "https://app.notion.com/p/41ab0c4d18ab8192933bc14f4417b0c0?pvs=204",
+    "title": "Technical Art Digest 8",
+    "recommendations": [
+      {
+        "title": "Blender 原生 Gaussian Splats 技术说明",
+        "reason": "直接关系到扫描数据进入 Blender 后的编辑与渲染流程。"
+      },
+      {
+        "title": "StableGen 0.4.0",
+        "reason": "开源项目把 AI 贴图、局部编辑和绑定串入 Blender，值得做小规模管线试验。"
+      },
+      {
+        "title": "Substance Designer Physics Scatter",
+        "reason": "展示如何把刚体模拟转成可复用的程序化材质。"
+      }
+    ],
+    "items": [
+      {
+        "id": 1,
+        "title": "Blender 原生 3D Gaussian Splats 技术说明",
+        "category": "技术美术",
+        "published": "2026-10-30",
+        "source": "Blender Developers",
+        "url": "https://code.blender.org/2026/10/splatting-the-gaussians-into-blender/",
+        "summary": "开发团队解释 5.3 对 3D Gaussian Splats 的初步原生支持和演示文件。这让扫描与重建结果可以进入 Blender 的常规场景流程；适合渲染与场景管线人员关注数据导入、编辑和性能边界。",
+        "image": "https://code.blender.org/wp-content/uploads/2026/10/gaussian_splat-480x270.jpg",
+        "imageSource": "https://code.blender.org/2026/10/splatting-the-gaussians-into-blender/",
+        "publishedTime": "2026-10-30T14:18:52+01:00"
+      },
+      {
+        "id": 2,
+        "title": "StableGen 0.4.0：Blender 内生成、贴图与自动绑定",
+        "category": "AIGC",
+        "published": "2026-10-28",
+        "source": "GitHub / StableGen",
+        "url": "https://github.com/sakalond/StableGen/releases",
+        "summary": "此次版本新增局部贴图编辑、Qwen Image 2.1 架构和基于 SkinTokens 的自动绑定，并重做面板。可作为本地 AI 资产流程的试验入口；正式接入项目前应检查模型许可、显存需求和绑定质量。",
+        "image": "https://opengraph.githubassets.com/6564435ab4598981b8c0922cfb5d4aacb428c7ec16aa61234b1ac98a3b54f502/sakalond/StableGen",
+        "imageSource": "https://github.com/sakalond/StableGen/releases"
+      },
+      {
+        "id": 3,
+        "title": "Physics Scatter：在 Substance 3D Designer 内模拟堆积材质",
+        "category": "技术美术",
+        "published": "2026-10-28",
+        "source": "80 Level",
+        "url": "https://80.lv/articles/simulate-physics-right-in-substance-3d-designer-with-this-tool",
+        "summary": "工具将自定义 OBJ/FBX 网格通过刚体模拟堆积，再烘焙为可平铺的高度、法线、颜色和 ID 等贴图。对碎石、骨骼、螺丝等重复材质很实用，核心价值是把物理排布直接带入 Designer 节点图。",
+        "image": "https://cdn.80.lv/api/upload/meta/50810/images/6ae1f27e933c3/contain_1200x630.jpg",
+        "imageSource": "https://80.lv/articles/simulate-physics-right-in-substance-3d-designer-with-this-tool",
+        "publishedTime": "2026-10-28T13:02:00+00:00"
+      },
+      {
+        "id": 4,
+        "title": "Ucupaint 3.0：Blender 图层绘制工作流升级",
+        "category": "技术美术",
+        "published": "2026-10-28",
+        "source": "80 Level",
+        "url": "https://80.lv/articles/free-blender-texture-painting-add-on-ucupaint-3-0-is-now-available",
+        "summary": "免费插件更新图层界面，增加独立高度与位移通道、调整图层和更灵活的烘焙目标。适合需要在 Blender 内完成多通道材质绘制的团队评估，尤其可留意 ORM 等输出是否匹配现有引擎规范。",
+        "image": "https://cdn.80.lv/api/upload/meta/50807/images/6ae1c87d2b7c4/contain_1200x630.jpg",
+        "imageSource": "https://80.lv/articles/free-blender-texture-painting-add-on-ucupaint-3-0-is-now-available",
+        "publishedTime": "2026-10-28T10:03:00+00:00"
+      },
+      {
+        "id": 5,
+        "title": "Marionette：通过控制点快速摆姿与修动画",
+        "category": "技术美术",
+        "published": "2026-10-29",
+        "source": "80 Level",
+        "url": "https://80.lv/articles/new-blender-add-on-makes-character-posing-much-easier",
+        "summary": "拖动手、脚或骨盆即可调整全身姿态，结果写回现有 Rig 的标准 FK 关键帧；还提供运动轨迹编辑和脚滑修正。支持多种常见人形 Rig，值得绑定与动画工具作者比较其非破坏式操作体验。",
+        "image": "https://cdn.80.lv/api/upload/meta/50828/images/6ae332d902269/contain_1200x630.jpg",
+        "imageSource": "https://80.lv/articles/new-blender-add-on-makes-character-posing-much-easier",
+        "publishedTime": "2026-10-29T11:49:00+00:00"
+      },
+      {
+        "id": 6,
+        "title": "Flattice：镜头驱动的二次元角色透视修形",
+        "category": "技术美术",
+        "published": "2026-10-29",
+        "source": "80 Level",
+        "url": "https://80.lv/articles/create-perfect-anime-faces-at-extreme-angles-with-this-blender-tool",
+        "summary": "DillonGoo Studios 的工具自动建立随摄像机工作的 Lattice 和权重，让脸部等区域在极端角度保持预期造型。它是典型的镜头相关变形方案，适合研究 NPR 角色绑定和动画镜头修形。",
+        "image": "https://cdn.80.lv/api/upload/meta/50830/images/6ae349077261f/contain_1200x630.jpg",
+        "imageSource": "https://80.lv/articles/create-perfect-anime-faces-at-extreme-angles-with-this-blender-tool",
+        "publishedTime": "2026-10-29T13:24:00+00:00"
+      },
+      {
+        "id": 7,
+        "title": "Substance 3D Painter 烘焙流程重构解析",
+        "category": "技术美术",
+        "published": "2026-10-29",
+        "source": "80 Level / Adobe 访谈",
+        "url": "https://80.lv/articles/adobe-explains-how-it-rebuilt-substance-3d-painter-s-baking-workflow",
+        "summary": "Adobe 产品经理解释 cage painting、自动重新烘焙及 Polygon Fill 改进的设计背景。对制作规范的启发是把 cage 修正、贴图检查和透明材质预览纳入更短的反馈循环；本文为赞助访谈。",
+        "image": "https://cdn.80.lv/api/upload/meta/50737/images/6ada96d31a389/contain_1200x630.jpg",
+        "imageSource": "https://80.lv/articles/adobe-explains-how-it-rebuilt-substance-3d-painter-s-baking-workflow",
+        "publishedTime": "2026-10-29T18:10:00+00:00"
+      },
+      {
+        "id": 8,
+        "title": "UE5 风格化木屋：模块套件与 Master Shader",
+        "category": "技术美术",
+        "published": "2026-10-27",
+        "source": "80 Level / 作者拆解",
+        "url": "https://80.lv/articles/building-a-stylized-mountain-cabin-with-modular-assets-and-custom-shaders",
+        "summary": "作者展示模块化资产、植被雕刻，以及带颜色调节、宏观变化和 RVT 融合的墙体主材质。适合环境技术美术参考如何用少量可复用材质支撑风格化场景变化。",
+        "image": "https://cdn.80.lv/api/upload/meta/50786/images/6adf893f03fe9/contain_1200x630.jpg",
+        "imageSource": "https://80.lv/articles/building-a-stylized-mountain-cabin-with-modular-assets-and-custom-shaders",
+        "publishedTime": "2026-10-27T16:10:00+00:00"
+      },
+      {
+        "id": 9,
+        "title": "五种风格化材质的 Designer 节点拆解",
+        "category": "技术美术",
+        "published": "2026-10-26",
+        "source": "80 Level / 作者拆解",
+        "url": "https://80.lv/articles/breakdown-creating-five-stylized-materials-in-substance-3d-ue5",
+        "summary": "从裂地、瓷砖到苔藓，文章逐项说明 Height Extrude、Warp、Tile Sampler 和 AO 的用法，并展示 UE5 中的呈现。偏中级材料教程，适合拆解形状层级和图结构复用。",
+        "image": "https://cdn.80.lv/api/upload/meta/50761/images/6adef1d34ecd2/contain_1200x630.jpg",
+        "imageSource": "https://80.lv/articles/breakdown-creating-five-stylized-materials-in-substance-3d-ue5",
+        "publishedTime": "2026-10-26T11:20:00+00:00"
+      },
+      {
+        "id": 10,
+        "title": "Tripo Agentic Canvas：可复用的 3D 资产节点流程",
+        "category": "AIGC",
+        "published": "2026-10-29",
+        "source": "Tripo 官方",
+        "url": "https://www.tripo3d.ai/blog/tripo-agentic-canvas",
+        "summary": "Tripo 发布可将生成、修形、拓扑、UV、贴图、绑定与导出串起来的可视化 Agent Canvas，并支持批量复用。它目前属于逐步开放的 beta，适合评估批量道具生产的流程设计，而非直接假定输出已达到游戏交付标准。",
+        "image": "https://mmx.prnewswire.com/media/MS2025611/Tripo-Agentic-Canvas.jpg?id=OA3052906&p=facebook",
+        "imageSource": "https://www.prnewswire.com/news-releases/tripo-ai-unveils-agentic-canvas-to-make-ai-3d-more-accessible-and-scalable-302926715.html"
+      }
+    ],
+    "trend": "这一周的重心是把新内容类型和自动化能力纳入现有 DCC 工作流：Blender 开始原生接纳 3D Gaussian Splats；程序化材质、角色摆姿和贴图分层工具则继续减少重复操作。AIGC 从单次生成走向可复用的资产流程，但实际拓扑、授权和生产稳定性仍需逐项验证。",
+    "practice": [],
+    "watch": [],
+    "backfill": false
+  },
+  {
+    "number": 9,
+    "start": "2026-11-02",
+    "end": "2026-11-08",
+    "notionUrl": "https://app.notion.com/p/41ab0c4d18ab8176b368cc0d786ed017?pvs=204",
+    "title": "Technical Art Digest 9",
+    "recommendations": [
+      {
+        "title": "UE5 伪球体材质拆解",
+        "reason": "提供完整的投影、UV 状态累积和 Blueprint 实现思路。"
+      },
+      {
+        "title": "Frontier3DBench",
+        "reason": "用可编辑性与运行行为检验 AI 3D 项目，适合设计团队评测标准。"
+      },
+      {
+        "title": "BGEN Hair",
+        "reason": "覆盖从毛发梳理到游戏 Hair Cards 的连续角色制作流程。"
+      }
+    ],
+    "items": [
+      {
+        "id": 1,
+        "title": "UE5 平面卡片伪球体：材质投影与 Blueprint 状态",
+        "category": "技术美术",
+        "published": "2026-11-04",
+        "source": "80 Level / 作者技术文章",
+        "url": "https://80.lv/articles/faking-a-spherical-planet-with-a-tileable-texture-in-ue5",
+        "summary": "作者用立体投影变换平铺纹理，以 World Position Offset 保持卡片朝向镜头，并由 Blueprint 累积绕行时的 UV 偏移与旋转。文章含完整数学与实现逻辑，是研究材质假几何和相机相关特效的高价值案例。",
+        "image": "https://cdn.80.lv/api/upload/meta/50850/images/6ae4d9883b347/contain_1200x630.jpg",
+        "imageSource": "https://80.lv/articles/faking-a-spherical-planet-with-a-tileable-texture-in-ue5",
+        "publishedTime": "2026-11-04T14:00:00+00:00"
+      },
+      {
+        "id": 2,
+        "title": "BGEN Hair：Blender 毛发制作、模拟与游戏 Hair Cards",
+        "category": "技术美术",
+        "published": "2026-11-03",
+        "source": "80 Level",
+        "url": "https://80.lv/articles/complete-3d-hair-grooming-simulation-add-on-for-blender",
+        "summary": "插件把梳理、辫发、模拟、碰撞和 Hair Cards 组织成连续工作流，可在影视发丝与游戏卡片间选择输出。适合角色技术美术评估毛发资产从造型到引擎交付的统一性；这是付费工具。",
+        "image": "https://cdn.80.lv/api/upload/meta/50883/images/6ae9cf6fafa0d/contain_1200x630.jpg",
+        "imageSource": "https://80.lv/articles/complete-3d-hair-grooming-simulation-add-on-for-blender",
+        "publishedTime": "2026-11-03T12:11:00+00:00"
+      },
+      {
+        "id": 3,
+        "title": "《绝区零》风格 Blender Shader 2.0 与自动套用插件",
+        "category": "技术美术",
+        "published": "2026-11-04",
+        "source": "80 Level / GitHub 项目介绍",
+        "url": "https://80.lv/articles/have-a-look-at-this-zzz-shader-for-blender-that-comes-with-auto-apply-add-on",
+        "summary": "更新后的卡通着色器区分身体和面部阴影，配套插件自动连接贴图、设置色彩空间和头部方向辅助对象。对 NPR 管线有参考价值：着色效果和导入配置应作为一套可复用资产。",
+        "image": "https://cdn.80.lv/api/upload/meta/50852/images/6ae5b2107d787/contain_1200x630.jpeg",
+        "imageSource": "https://80.lv/articles/have-a-look-at-this-zzz-shader-for-blender-that-comes-with-auto-apply-add-on",
+        "publishedTime": "2026-11-04T18:30:00+00:00"
+      },
+      {
+        "id": 4,
+        "title": "Physical Atmosphere²：Blender 实时程序化天空",
+        "category": "技术美术",
+        "published": "2026-11-04",
+        "source": "80 Level",
+        "url": "https://80.lv/articles/get-this-blender-add-on-for-realistic-real-time-procedural-sky",
+        "summary": "工具提供程序化体积云、大气和昼夜天体参数，并在视口中更新光照与阴影。可用于快速 Lookdev 和环境光照原型；这是付费插件，物理准确性与性能应由实际场景测试。",
+        "image": "https://cdn.80.lv/api/upload/meta/50874/images/6ae8db38af6f1/contain_1200x630.jpg",
+        "imageSource": "https://80.lv/articles/get-this-blender-add-on-for-realistic-real-time-procedural-sky",
+        "publishedTime": "2026-11-04T19:30:00+00:00"
+      },
+      {
+        "id": 5,
+        "title": "风格化巴塞罗那场景的模块化建筑套件",
+        "category": "技术美术",
+        "published": "2026-11-04",
+        "source": "80 Level / 作者拆解",
+        "url": "https://80.lv/articles/creating-a-stylized-barcelona-environment-using-a-modular-architecture-kit",
+        "summary": "作者用模块化建筑、平铺材质与 Trim Sheet 构建街景，再在 UE5 中完成布置。适合环境技术美术学习如何控制资产种类，同时保持城市立面变化和统一风格。",
+        "image": "https://cdn.80.lv/api/upload/meta/50882/images/6ae9c63820152/contain_1200x630.jpg",
+        "imageSource": "https://80.lv/articles/creating-a-stylized-barcelona-environment-using-a-modular-architecture-kit",
+        "publishedTime": "2026-11-04T18:35:00+00:00"
+      },
+      {
+        "id": 6,
+        "title": "NVIDIA DLSS 5 在《霍格沃茨之遗》的画质展示",
+        "category": "技术美术",
+        "published": "2026-11-05",
+        "source": "80 Level",
+        "url": "https://80.lv/articles/nvidia-shows-off-dlss-5-graphics-improvements-in-hogwarts-legacy",
+        "summary": "报道展示 DLSS 5 在具体游戏中的视觉对比，说明神经图形技术正继续介入实时画面。渲染团队可关注其对材质细节、时间稳定性及性能预算的实际影响；报道中的展示效果不能代替本项目实测。",
+        "image": "https://cdn.80.lv/api/upload/meta/50900/images/6aec629f6d8fd/contain_1200x630.jpg",
+        "imageSource": "https://80.lv/articles/nvidia-shows-off-dlss-5-graphics-improvements-in-hogwarts-legacy",
+        "publishedTime": "2026-11-05T11:05:00+00:00"
+      },
+      {
+        "id": 7,
+        "title": "Houdini FLIP 流体入门：DOP、SOP、Solaris 到 Karma",
+        "category": "技术美术",
+        "published": "2026-11-05",
+        "source": "80 Level / Gnomon 课程介绍",
+        "url": "https://80.lv/articles/learn-to-simulate-realistic-fluid-interactions-in-houdini",
+        "summary": "课程通过一个鲨鱼镜头讲解 FLIP 流体、白水、场景装配和日夜光照，含 8 节、约 4 小时内容。适合初学者建立从模拟到最终渲染的完整概念；完整课程需订阅。",
+        "image": "https://cdn.80.lv/api/upload/meta/50902/images/6aec6fdeaadae/contain_1200x630.jpg",
+        "imageSource": "https://80.lv/articles/learn-to-simulate-realistic-fluid-interactions-in-houdini",
+        "publishedTime": "2026-11-05T12:00:00+00:00"
+      },
+      {
+        "id": 8,
+        "title": "水彩画法融入 3D 贴图与环境表现",
+        "category": "技术美术",
+        "published": "2026-11-03",
+        "source": "80 Level / 作者拆解",
+        "url": "https://80.lv/articles/how-to-combine-watercolor-painting-with-3d-texturing",
+        "summary": "作者介绍将传统水彩观察和笔触思路用于 3D 贴图，避免材质只追求照片真实。对风格化项目的价值在于把美术语言转为可重复执行的贴图与 Lookdev 规则。",
+        "image": "https://cdn.80.lv/api/upload/meta/50887/images/6aea14febdb34/contain_1200x630.jpg",
+        "imageSource": "https://80.lv/articles/how-to-combine-watercolor-painting-with-3d-texturing",
+        "publishedTime": "2026-11-03T17:08:00+00:00"
+      },
+      {
+        "id": 9,
+        "title": "CozyBlanket Pro：AI 辅助重拓扑",
+        "category": "AIGC",
+        "published": "2026-11-03",
+        "source": "80 Level",
+        "url": "https://80.lv/articles/sparseal-releases-ai-assisted-retopology-app-for-pc",
+        "summary": "Sparseal 发布独立应用，实时分析高低模并辅助四边面填充、边线流向和极点安排，还包含 UV 展开与打包。值得对 AI 生成或扫描网格做基准测试，重点检查可控性、动画变形和导出后的拓扑质量。",
+        "image": "https://cdn.80.lv/api/upload/meta/50888/images/6aea13a2ccdc1/contain_1200x630.jpg",
+        "imageSource": "https://80.lv/articles/sparseal-releases-ai-assisted-retopology-app-for-pc",
+        "publishedTime": "2026-11-03T17:02:00+00:00"
+      },
+      {
+        "id": 10,
+        "title": "Frontier3DBench：评测 Agent 创建可编辑 3D 项目",
+        "category": "AIGC",
+        "published": "2026-11-06",
+        "source": "研究论文",
+        "url": "https://arxiv.org/abs/2611.09017",
+        "summary": "研究提出覆盖物体、场景和可交互开放世界的 145 个任务，联合评估外观、结构与行为。它提醒我们不能只看渲染截图，AI 3D 工作流还要检查项目可编辑性、规范匹配和运行结果。",
+        "image": "https://api.alphaxiv.org/open-graph/v1/paper/2611.09017.png?v=2",
+        "imageSource": "https://www.alphaxiv.org/abs/2611.09017"
+      }
+    ],
+    "trend": "这一周出现两条清晰路线：一是继续用材质和程序化方法替代昂贵的几何或手工设置；二是 AI 工具开始面对拓扑与可编辑项目的评测。付费插件和课程较多，采用前应先看演示、兼容性与项目文件。",
+    "practice": [],
+    "watch": [],
+    "backfill": false
+  },
+  {
+    "number": 10,
+    "start": "2026-11-09",
+    "end": "2026-11-15",
+    "notionUrl": "https://app.notion.com/p/41ab0c4d18ab81ed90bcc5d3f0ad54a7?pvs=204",
+    "title": "Technical Art Digest 10",
+    "recommendations": [
+      {
+        "title": "Unreal Engine 5.9 Preview",
+        "reason": "直接影响编辑器自动化与未来引擎工作流，值得先做兼容性验证。"
+      },
+      {
+        "title": "Blender 5.3",
+        "reason": "Gaussian Splats 的原生支持可能改变扫描场景的制作方式。"
+      },
+      {
+        "title": "CORTAO 开源",
+        "reason": "提供可研究的 SSAO 实现与对比资料，适合渲染技术复盘。"
+      }
+    ],
+    "items": [
+      {
+        "id": 1,
+        "title": "Unreal Engine 5.9 MegaJam Preview 发布",
+        "category": "技术美术",
+        "published": "2026-11-09",
+        "source": "Epic Games 官方发布说明",
+        "url": "https://dev.epicgames.com/documentation/unreal-engine/unreal-engine-5-9-release-notes",
+        "summary": "预览版带来 Python、Unreal MCP、AI 辅助工作流、Web 目标以及渲染和动画改进。技术美术可重点检查编辑器自动化和已有插件的兼容性；这是预览版本，应先在项目副本中评估。",
+        "image": "https://d3kjluh73b9h9o.cloudfront.net/optimized/4X/2/8/5/285e789891ccd442ffa1ea62503091cc0a06bb1e_2_1024x128.jpeg",
+        "imageSource": "https://forums.unrealengine.com/t/preview-2-unreal-engine-5-9-preview/2852840"
+      },
+      {
+        "id": 2,
+        "title": "Blender 5.3 正式发布：原生 Gaussian Splats 与项目系统",
+        "category": "技术美术",
+        "published": "2026-11-10",
+        "source": "Blender 官方",
+        "url": "https://www.blender.org/releases/5-3/",
+        "summary": "新版本可导入 PLY、SPZ 和 glTF 中的 Gaussian Splats，以点云存储、使用 Geometry Nodes 处理并在 EEVEE、Cycles 等模式中渲染。对扫描资产、场景重建与 DCC 管线整合影响较大，另有新的可选项目系统。",
+        "image": "https://studio.blender.org/files/public/thumbnail/92/13/92138c1d3b4f9ebe721e7c9d1c3e408e_m.webp",
+        "imageSource": "https://studio.blender.org/blog/blender-5-3-splash-screen-study/"
+      },
+      {
+        "id": 3,
+        "title": "EVE Online 相关 CORTAO 屏幕空间环境遮蔽开源",
+        "category": "技术美术",
+        "published": "2026-11-13",
+        "source": "80 Level / GitHub",
+        "url": "https://80.lv/articles/eve-online-dev-open-sources-its-physically-based-ssao-technology",
+        "summary": "CORTAO 用屏幕空间信息近似物理环境遮蔽，并提供源码、文档和视觉对比。对渲染程序员最有价值的是分析深度不连续处的伪影、采样收敛和平台成本；代码项目见文内 GitHub 链接。",
+        "image": "https://cdn.80.lv/api/upload/meta/51020/images/6af744775c9b7/contain_1200x630.jpg",
+        "imageSource": "https://80.lv/articles/eve-online-dev-open-sources-its-physically-based-ssao-technology",
+        "publishedTime": "2026-11-13T17:10:00+00:00"
+      },
+      {
+        "id": 4,
+        "title": "Unity Graphics Kernel：新图形后端进入实验阶段",
+        "category": "技术美术",
+        "published": "2026-11-12",
+        "source": "Unity Graphics 团队",
+        "url": "https://discussions.unity.com/t/introducing-the-unity-graphics-kernel/1741739",
+        "summary": "Unity 公布新图形抽象层，首批能力包括 Multi Draw Indirect 和 Vulkan 硬件光线查询，附 GPU 草地裁剪示例。可研究 GPU Driven 绘制和后续渲染能力，但官方明确不建议目前用于生产。",
+        "image": "https://europe1.discourse-cdn.com/unity/original/4X/7/2/d/72d1aed8451432c810e47897868184cc75d0f46b.jpeg",
+        "imageSource": "https://discussions.unity.com/t/introducing-the-unity-graphics-kernel/1741739"
+      },
+      {
+        "id": 5,
+        "title": "Editable Motion Paths：直接在视口修改 Blender 动画轨迹",
+        "category": "技术美术",
+        "published": "2026-11-11",
+        "source": "80 Level / Blender Extensions",
+        "url": "https://80.lv/articles/edit-your-blender-animations-just-like-editing-mesh-with-this-free-tool",
+        "summary": "免费插件把骨骼和物体的运动显示为可编辑曲线，拖动控制点及切线会实时更新 F-Curve，并提供形状、节奏和清理工具。适合动画工具与绑定人员试验更直观的运动修正界面。",
+        "image": "https://cdn.80.lv/api/upload/meta/50982/images/6af49b53044b2/contain_1200x630.jpg",
+        "imageSource": "https://80.lv/articles/edit-your-blender-animations-just-like-editing-mesh-with-this-free-tool",
+        "publishedTime": "2026-11-11T16:44:00+00:00"
+      },
+      {
+        "id": 6,
+        "title": "HairMesh：用曲线生成可控四边面风格化头发",
+        "category": "技术美术",
+        "published": "2026-11-10",
+        "source": "80 Level / GitHub",
+        "url": "https://80.lv/articles/free-blender-tool-for-creating-stylized-anime-hair",
+        "summary": "免费 Blender 插件允许在头部绘制曲线，再生成带均匀边线的发束网格，提供对称、连接和形态调节。适合动漫角色发型的可编辑基础网格生产；报道注明需要 Blender 5.1 或更新版本。",
+        "image": "https://cdn.80.lv/api/upload/meta/50964/images/6af327e8bb998/contain_1200x630.jpg",
+        "imageSource": "https://80.lv/articles/free-blender-tool-for-creating-stylized-anime-hair",
+        "publishedTime": "2026-11-10T14:19:00+00:00"
+      },
+      {
+        "id": 7,
+        "title": "Substance Designer 手绘基底生成器拆解",
+        "category": "技术美术",
+        "published": "2026-11-09",
+        "source": "80 Level / 作者教程",
+        "url": "https://80.lv/articles/how-to-make-hand-painted-base-generator-in-substance-3d-designer",
+        "summary": "作者展示双色渐变、渐变遮罩、斑点和碎片四类生成器，目标是在多个资产上保持手绘风格一致。对材质工具开发的启发是将可复用的风格规则暴露为易调参数。",
+        "image": "https://cdn.80.lv/api/upload/meta/50950/images/6af1cd9f3450a/contain_1200x630.jpg",
+        "imageSource": "https://80.lv/articles/how-to-make-hand-painted-base-generator-in-substance-3d-designer",
+        "publishedTime": "2026-11-09T13:39:00+00:00"
+      },
+      {
+        "id": 8,
+        "title": "Houdini 程序化游戏环境制作课程",
+        "category": "技术美术",
+        "published": "2026-11-12",
+        "source": "80 Level / 课程介绍",
+        "url": "https://80.lv/articles/learn-to-build-procedural-game-environments-in-houdini",
+        "summary": "约 4 小时工作坊贯穿 Houdini、ZBrush 和 UE5，围绕风格化奇幻场景的程序化制作。适合有 DCC 基础、希望搭建环境生成与引擎交付流程的学习者；这是付费课程介绍。",
+        "image": "https://cdn.80.lv/api/upload/meta/50997/images/6af5bd4bdf9be/contain_1200x630.jpg",
+        "imageSource": "https://80.lv/articles/learn-to-build-procedural-game-environments-in-houdini",
+        "publishedTime": "2026-11-12T13:21:00+00:00"
+      },
+      {
+        "id": 9,
+        "title": "ArtStation 调整生成式 AI 声明与默认过滤",
+        "category": "AIGC",
+        "published": "2026-11-09",
+        "source": "ArtStation 官方",
+        "url": "https://magazine.artstation.com/2026/11/more-transparency-and-control-for-generative-ai-on-artstation/",
+        "summary": "上传者需更明确地申报生成式 AI 使用程度，浏览者可控制过滤强度，NoAI 标记也改为默认启用。对作品发布与参考资料搜集流程都有直接影响，团队应检查已有展示页的标记。",
+        "image": "",
+        "imageSource": ""
+      },
+      {
+        "id": 10,
+        "title": "Adobe Project Sight Span：单张图像变为可导航场景",
+        "category": "AIGC",
+        "published": "2026-11-11",
+        "source": "Adobe MAX 官方演示",
+        "url": "https://blog.adobe.com/en/publish/2026/11/11/adobe-max-sneaks",
+        "summary": "Adobe 在 MAX Sneaks 展示从单张图像构建可探索空间、寻找新镜头角度的研究项目。对概念设计和镜头预演值得观察，但目前是实验演示，不能据此推断可直接生成可编辑的游戏场景资产。",
+        "image": "https://blog.adobe.com/en/publish/2026/11/11/media_190dc6538435b84ba934466b8eac6942f9e97a33d.png?width=1200&#x26;format=pjpg&#x26;optimize=medium",
+        "imageSource": "https://blog.adobe.com/en/publish/2026/11/11/adobe-max-sneaks"
+      }
+    ],
+    "trend": "这周的重点是引擎和 DCC 的底层能力：UE5.9 Preview 将脚本、Web 目标和 AI 工作流带入预览版；Blender 5.3 原生支持 Gaussian Splats；Unity 公开新图形后端。与此同时，SSAO 和动画编辑出现可直接研究的开源方案。预览版与实验性后端均应先在独立项目验证。",
+    "practice": [],
+    "watch": [],
+    "backfill": false
+  }
+]
