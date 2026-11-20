@@ -12,7 +12,7 @@
 
 `content/issues.json` 是网站的内容源。每期含 `number`、`start`、`end`、`recommendations`、`items`、`trend`、`practice`、`watch`。历史补档有 `backfill: true`，只收录可核实的条目；早期条数少于常规周报时保持实际条数。
 
-第 8–10 期导入已有 Notion 周报，第 1–7 期按原文实际发布日期补档。原始图片保留来源链接，版权归作者所有。历史导入的第 10 期 ArtStation 政策条目暂无可核实配图，页面仍保留原有文字与原文链接。
+第 8–10 期导入已有 Notion 周报，第 1–7 期按原文实际发布日期补档，并已同步到 Notion 周报父页面。原始图片保留来源链接，版权归作者所有。
 
 ## 本地预览
 

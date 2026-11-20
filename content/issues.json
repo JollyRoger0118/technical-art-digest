@@ -88,7 +88,8 @@
     ],
     "trend": "本周从 Metal 神经纹理压缩到 D3D12 稀疏缓冲，重点都落在显存如何更有效地服务画面。Vulkan 离屏渲染与 Unity 噪声 Shader 则提供了可立即复现的练习。",
     "practice": "在 Unity 中重做溶解材质，并用离屏 HDR Pass 记录后处理前后的画面差异。",
-    "watch": "神经纹理压缩仍需验证透明、各向异性过滤与不同材质尺寸的实际效果。"
+    "watch": "神经纹理压缩仍需验证透明、各向异性过滤与不同材质尺寸的实际效果。",
+    "notionUrl": "https://app.notion.com/p/41eb0c4d18ab810ab34ff3f9af902a12?pvs=204"
   },
   {
     "number": 2,
@@ -153,7 +154,8 @@
     ],
     "trend": "大规模动态几何体的 BVH 占用与 Unreal 表面稳定抖动，分别触及场景扩展和材质细节稳定性。内存管理基础也提醒工具开发者关注资源生命周期。",
     "practice": "在 UE 示例场景中比较普通屏幕抖动与表面稳定分形抖动的镜头运动表现。",
-    "watch": "四面体笼技术的构建成本和动画资产兼容性仍需在制作管线中验证。"
+    "watch": "四面体笼技术的构建成本和动画资产兼容性仍需在制作管线中验证。",
+    "notionUrl": "https://app.notion.com/p/41eb0c4d18ab81e28271caa503d6a216?pvs=204"
   },
   {
     "number": 3,
@@ -231,7 +233,8 @@
     ],
     "trend": "本周多篇内容聚焦每帧成本：模糊算法减少采样，Metal tile shader 减少独立 Pass，字体渲染则在质量与图集管理之间权衡。",
     "practice": "用 Godot 值噪声导数驱动法线或顶点位移，并观察连续性。",
-    "watch": "Tile shader 方法依赖特定 GPU 架构，迁移前需重新测量。"
+    "watch": "Tile shader 方法依赖特定 GPU 架构，迁移前需重新测量。",
+    "notionUrl": "https://app.notion.com/p/41eb0c4d18ab8122a568c1ea5ef894c2?pvs=204"
   },
   {
     "number": 4,
@@ -296,7 +299,8 @@
     ],
     "trend": "这周的实用主题是 DCC 与实时场景的制作细节：Blender 烘焙、Grease Pencil 变形和 Unreal Lumen 降噪都解决具体返工点。",
     "practice": "在一个小型 Blender 资产上测试 Fyr Baker 的贴图烘焙设置和输出检查。",
-    "watch": "Grease Pencil Shape Keys 的编辑限制与 Lumen 补光方案的性能代价值得留意。"
+    "watch": "Grease Pencil Shape Keys 的编辑限制与 Lumen 补光方案的性能代价值得留意。",
+    "notionUrl": "https://app.notion.com/p/41eb0c4d18ab81d9ad65f7fb95ed0de8?pvs=204"
   },
   {
     "number": 5,
@@ -361,7 +365,8 @@
     ],
     "trend": "图形与 AI 推理都在复用 GPU 性能分析方法，透明渲染也继续借助时空复用降低成本。与此同时，UV 工具更新更直接影响资产制作的周转时间。",
     "practice": "用同一组复杂资产比较 RizomUV 新版展开速度与结果质量。",
-    "watch": "OIT 加速方案在快速运动、细小透明几何体上的时间稳定性仍需测试。"
+    "watch": "OIT 加速方案在快速运动、细小透明几何体上的时间稳定性仍需测试。",
+    "notionUrl": "https://app.notion.com/p/41eb0c4d18ab81459d01c39938d1befa?pvs=204"
   },
   {
     "number": 6,
@@ -426,7 +431,8 @@
     ],
     "trend": "程序化树木把生长模拟、卡片叶片和远景 impostor 连成完整资产链。另一边，Godot 透明教程和 Brigador Killers 的破坏制作展示了画面表现如何受管线与玩法共同约束。",
     "practice": "依据树木文章搭一个最小的枝干生长原型，并为远景烘焙 impostor。",
-    "watch": "关注透明排序、植被 LOD 切换与 3D 转 Sprite 的画面一致性。"
+    "watch": "关注透明排序、植被 LOD 切换与 3D 转 Sprite 的画面一致性。",
+    "notionUrl": "https://app.notion.com/p/41eb0c4d18ab8163b5f8dd627db61ca8?pvs=204"
   },
   {
     "number": 7,
@@ -503,7 +509,8 @@
     ],
     "trend": "GPU 驱动内容处理与 Godot 深度模板教程都围绕可复用的渲染基础；Substance 3D Painter 12.2 则把烘焙笼编辑带回视口交互。",
     "practice": "用 Count、Scan、Write 三步做一个简单实例剔除练习。",
-    "watch": "Painter 新的 cage painting 在现有资产烘焙管线中的兼容性值得持续测试。"
+    "watch": "Painter 新的 cage painting 在现有资产烘焙管线中的兼容性值得持续测试。",
+    "notionUrl": "https://app.notion.com/p/41eb0c4d18ab815283b0f5ccc997af01?pvs=204"
   },
   {
     "number": 8,
@@ -918,8 +925,8 @@
         "source": "ArtStation 官方",
         "url": "https://magazine.artstation.com/2026/11/more-transparency-and-control-for-generative-ai-on-artstation/",
         "summary": "上传者需更明确地申报生成式 AI 使用程度，浏览者可控制过滤强度，NoAI 标记也改为默认启用。对作品发布与参考资料搜集流程都有直接影响，团队应检查已有展示页的标记。",
-        "image": "",
-        "imageSource": ""
+        "image": "https://cdn.80.lv/api/upload/meta/50955/images/6af2bae3631f5/contain_1200x630.jpg",
+        "imageSource": "https://80.lv/articles/artstation-adds-ai-declarations-default-ai-filtering-for-artwork"
       },
       {
         "id": 10,
